@@ -41,7 +41,9 @@
     username: "Gary",
 
     password: "#JjajALI4DNFNM2FJF ",
+
     #(password will be bcrypted)
+    
     projects : [
       "rails_generator_api",
       "stock_listings_api",
