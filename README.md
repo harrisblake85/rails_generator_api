@@ -1,24 +1,50 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Early Goals:
 
-Things you may want to cover:
+* Generate Customized Rails Commands Using a FrontEnd UI
 
-* Ruby version
+* UI could use --flag checkboxes, custom project name, etc (ex: rails new etc)
 
-* System dependencies
+### End goal would be the generation of most common rails commands such as:
+* rails New
+* rails migration
+* rails scaffold
+* rails db:seed,create,reset
+* Each with their own customizable flags through
 
-* Configuration
 
-* Database creation
+## Command Model:
+* Contains information about the commands
 
-* Database initialization
+* Example:
+{
+  name: "New Rails API",
 
-* How to run the test suite
+  project: "rails_generator_api",
 
-* Services (job queues, cache servers, search engines, etc.)
+  command: "rails new rails_generator_api --api -d postgresql --skip-active-storage",
+  uses: 6
+}
 
-* Deployment instructions
+## User Model
 
-* ...
+* Allows users to save commands to their profile.
+* Example:
+  {
+    username: "Gary",
+
+    password: "#JjajALI4DNFNM2FJF (bcrypted)",
+
+    otherdata: {}
+
+  }
+
+## Connection Model
+* Through Table For User And Command
+* Example:
+  {
+    user_id: 5,
+    command_id: 2,
+    forks:12
+  }
