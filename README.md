@@ -17,7 +17,8 @@
 ## Command Model:
 * Contains information about the commands
 
-* Example:
+### Example:
+```
 {
   name: "New Rails API",
 
@@ -26,11 +27,13 @@
   command: "rails new rails_generator_api --api -d postgresql --skip-active-storage",
   uses: 6
 }
+```
 
 ## User Model
 
 * Allows users to save commands to their profile.
-* Example:
+### Example:
+```
   {
     username: "Gary",
 
@@ -39,12 +42,17 @@
     otherdata: {}
 
   }
+```
 
 ## Connection Model
 * Through Table For User And Command
-* Example:
+* Allows many users to have the same command
+* Allows one user to save many commands
+### Example:
+```
   {
     user_id: 5,
     command_id: 2,
     forks:12
   }
+```
