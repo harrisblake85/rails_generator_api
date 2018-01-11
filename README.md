@@ -11,7 +11,7 @@
 * rails migration
 * rails scaffold
 * rails db:seed,create,reset
-* Each with their own customizable flags through
+* Each with their own customizable flags, parameters and variables through the UI
 
 
 ## Command Model:
@@ -22,9 +22,12 @@
 {
   name: "New Rails API",
 
-  project: "rails_generator_api",
+  begincommand: "rails new ",
 
-  command: "rails new rails_generator_api --api -d postgresql --skip-active-storage",
+  #(insert project name via ui when displaying for copy paste)
+
+  endcommand: "--api -d postgresql --skip-active-storage",
+
   uses: 6
 }
 ```
@@ -37,9 +40,13 @@
   {
     username: "Gary",
 
-    password: "#JjajALI4DNFNM2FJF (bcrypted)",
-
-    otherdata: {}
+    password: "#JjajALI4DNFNM2FJF ",
+    #(password will be bcrypted)
+    projects : [
+      "rails_generator_api",
+      "stock_listings_api",
+      "my_project"
+    ]
 
   }
 ```
